@@ -1,13 +1,16 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, lazy, Suspense } from 'react';
 import { Button,Navbar,Container,Nav } from 'react-bootstrap';
 import './App.css';
 import Data from './data.js';
-import Detail from './Detail'
 import axios from 'axios';
 import { Route, Link, Switch } from "react-router-dom";
 import Cart from './Cart';
+let Detail = lazy(() => import('./Detail.js'))
 
 export const countContext = React.createContext();
+
+
+
 
 function App() {
 
@@ -54,9 +57,6 @@ function App() {
             </countContext.Provider>
 
             <button className="btn btn-primary" onClick={() => {
-
-
-              
               axios.get('https://codingapple1.github.io/shop/data2.json')
                 .then((result) => {setShoes([...shoes, ...result.data]) })
               .catch(()=>{console.log('fail')})
@@ -66,7 +66,9 @@ function App() {
 
         <Route path="/detail/:id">
           <countContext.Provider value={count}>
-            <Detail shoes={shoes} count={count} setCount={setCount}></Detail>
+            <Suspense fallback={<div>로딩중입니다</div>}>
+              <Detail shoes={shoes} count={count} setCount={setCount}></Detail>
+            </Suspense>
           </countContext.Provider>
       </Route>
 
@@ -95,7 +97,7 @@ function List(props) {
   )
 }
 
-function Test() {
+function Test(props) {
 
   const 재고 = useContext(countContext)
 

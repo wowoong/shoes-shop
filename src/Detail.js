@@ -17,6 +17,8 @@ const Hh4 = styled.h4`
 
 function Detail(props) {
 
+  
+
   const newCount = useContext(countContext);
 
   const [out, setOut] = useState(true);
@@ -29,10 +31,25 @@ function Detail(props) {
     return ()=>{clearTimeout(timer)}
   },[]);
   
-
   const { id } = useParams();
   const history = useHistory();
   const match = props.shoes.find((a) => { return a.id == id });
+
+
+  
+  useEffect(() => {
+    let arr = localStorage.getItem('watched');
+    if (arr == null) {
+      arr =[]
+    } else { arr = JSON.parse(arr) }
+    
+    arr.push(id);
+    arr = [...new Set(arr)];
+    
+    localStorage.setItem('watched', JSON.stringify(arr))
+  }, [])
+
+
  
   return(
     <div className="container">
@@ -74,14 +91,14 @@ function Detail(props) {
 
     <Nav className="mt-5" variant="tabs" defaultActiveKey="link-0">
       <Nav.Item>
-          <Nav.Link eventKey="link-0" onClick={() => { setChange(false); setTab(0)}}>Active</Nav.Link>
+        <Nav.Link eventKey="link-0" onClick={() => { setChange(false); setTab(0)}}>Active</Nav.Link>
       </Nav.Item>
       <Nav.Item>
-          <Nav.Link eventKey="link-1" onClick={() => { setChange(false); setTab(1)}}>Option 2</Nav.Link>
+        <Nav.Link eventKey="link-1" onClick={() => { setChange(false); setTab(1)}}>Option 2</Nav.Link>
       </Nav.Item>
     </Nav>
 
-    <CSSTransition in={change} classNames="wow" timeout={500}>
+    <CSSTransition in={change} classNames="wow" timeout={800}>
     <TabContent tab={tab} setChange={setChange}></TabContent>
     </CSSTransition>
 
@@ -105,8 +122,6 @@ function Info(props) {
     <p>재고 : {props.count[0]}</p>
   )
 }
-
-
 
 function 함수명(state) {
   return {
