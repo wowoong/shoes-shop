@@ -1,7 +1,7 @@
 # **Shoes-Shop**
 React, Scss, Redux, Bootstrap, React Router 연습 인터넷 쇼핑몰 
 
-**기능**
+### **기능**
 ![shoesShop-home](https://user-images.githubusercontent.com/85971333/148727112-5b7bb05f-ed8c-4c23-a55d-53180c4c9f66.png)
 + 쇼핑몰 메인 페이지.
 + 하단에 더보기를 누르면 추가로 상품이 더 나옵니다.
@@ -18,5 +18,5 @@ React, Scss, Redux, Bootstrap, React Router 연습 인터넷 쇼핑몰
 
 ---
 
-**사용 언어**
+### **사용한 기술 스택**
 React, Scss, Redux
