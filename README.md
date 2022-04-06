@@ -1,5 +1,5 @@
 # **Shoes-Shop**
-React, Scss, Redux, Bootstrap, React Router 연습 인터넷 쇼핑몰 
+React, Scss, Redux, Bootstrap, React Router  인터넷 쇼핑몰 
 
 ### **기능**
 ![shoesShop-home](https://user-images.githubusercontent.com/85971333/148727112-5b7bb05f-ed8c-4c23-a55d-53180c4c9f66.png)
