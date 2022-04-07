@@ -19,4 +19,4 @@ React, Scss, Redux, Bootstrap, React Router  인터넷 쇼핑몰
 ---
 
 ### **사용한 기술 스택**
-React, Scss, Redux
+React, Scss, Redux, JS
