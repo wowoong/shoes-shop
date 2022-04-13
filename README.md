@@ -15,7 +15,7 @@ React, Scss, Redux, Bootstrap, React Router  인터넷 쇼핑몰
 + 상품 클릭시 detail 페이지로 변환되고 상단의 팝업은 3초 후 사라집니다.
 + 주문하기 클릭하면 cart 페이지로 넘어가고 뒤로가기 버튼은 home으로 돌아갑니다
 
-Demo: woongdidas-mall.netlify.app
+Demo: https:/woongdidas-mall.netlify.app
 ---
 
 ### **사용한 기술 스택**
