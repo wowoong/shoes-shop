@@ -20,9 +20,9 @@ function reducer2(state = alertValue, action) {
 }
 
 const oneState = [
-    { id: 0, name: 'coolShoes', quan: 2, price: 1500 },
-    { id: 1, name: 'hotShoes', quan: 4, price: 4000 },
-    { id: 2, name: 'sexyShoes', quan: 8, price: 13000 }
+    { id: 0, name: 'White and Black', quan: 2, price: 1500 },
+    { id: 1, name: 'Red Knit', quan: 4, price: 4000 },
+    { id: 2, name: 'Grey Yordan', quan: 8, price: 13000 }
   ]
 function reducer(state = oneState, action) {
   if (action.type === '항목추가') {
