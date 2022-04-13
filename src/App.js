@@ -19,9 +19,9 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar bg="dark" variant="dark">
+      <Navbar bg="light" variant="light">
         <Container>
-        <Navbar.Brand as={Link} to="/">Hyo-pang-Eats</Navbar.Brand>
+        <Navbar.Brand as={Link} to="/">woongdidas</Navbar.Brand>
         <Nav className="me-auto">
           <Nav.Link as={Link} to="/">Home</Nav.Link>
           <Nav.Link as={Link} to="/detail/1">Detail</Nav.Link>

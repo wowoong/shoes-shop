@@ -91,10 +91,10 @@ function Detail(props) {
 
     <Nav className="mt-5" variant="tabs" defaultActiveKey="link-0">
       <Nav.Item>
-        <Nav.Link eventKey="link-0" onClick={() => { setChange(false); setTab(0)}}>Active</Nav.Link>
+        <Nav.Link eventKey="link-0" onClick={() => { setChange(false); setTab(0)}}>상품상세</Nav.Link>
       </Nav.Item>
       <Nav.Item>
-        <Nav.Link eventKey="link-1" onClick={() => { setChange(false); setTab(1)}}>Option 2</Nav.Link>
+        <Nav.Link eventKey="link-1" onClick={() => { setChange(false); setTab(1)}}>배송/교환/반품 안내</Nav.Link>
       </Nav.Item>
     </Nav>
 
